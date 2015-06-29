@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Lema21
+ * @category   Lema21
+ * @package    Lema21_Util
+ * @copyright  Copyright (c) 2010-2011 Unicode Systems. (http://www.unicodesystems.in)
+ * @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ 
+  Módulo que irá conter toda regra de negócio para geração de nota fiscal eletrônica através do Bling.
+
+  Como funciona o módulo:
+
+  - Na instalação será criado 3 campos no pedido: 
+  - - - nfe_number :  número da nota fiscal
+  - - - nfe_access_key : chave da acesso da nota fiscal
+  - - - nfe_status : status da nota fiscal
+
+  #Release 1
+  - Após o módulo instalado, na tela de cada pedido, terá a opção "Emitir NF-E"
+  - Ao clicar no botão, um XML no padrão do bling será criado e salvo no diretorio /var/nfe/ 
+  - este XML será enviado pro serviço (recebimento de notas fiscais) do bling, o Bling irá retornar o número da nf-e, que será armazenado
+
+  #Release 2
+  - Com o número da nota, irá ser chamado para outro serviço do bling de emissão de NF-e, que irá retornar o status da nota e a chave de acesso
+  
+
+  Pre-requisito:
+  - ter os seguintes atributos de produto cadastrados
+ */-->
+<config>
+    <modules>
+        <Lema21_Nfe>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Lema21_Nfe>
+    </modules>
+</config>

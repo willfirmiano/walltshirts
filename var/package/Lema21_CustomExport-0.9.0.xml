@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package>
+    <name>Lema21_CustomExport</name>
+    <version>0.9.0</version>
+    <stability>stable</stability>
+    <license uri="https://github.com/lema21/magent_custom_export">GNU General Public License (GPL)</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Module to export sales in Magento to custom CSV</summary>
+    <description>With this module is possible to export sales in custom CSV!&#xD;
+&#xD;
+&#xD;
+Possible Entities to export: order|customer|address&#xD;
+&#xD;
+Example (file Template/template.csv):&#xD;
+&#xD;
+order.increment_id | order.status | order.grand_total | customer.email</description>
+    <notes>Beta version</notes>
+    <authors><author><name>Marcelo Linhares</name><user>marcelolinhares</user><email>marcelolinhares@gmail.com</email></author></authors>
+    <date>2013-05-30</date>
+    <time>02:44:01</time>
+    <contents><target name="magelocal"><dir name="Lema21"><dir name="CustomExport"><dir name="Helper"><file name="Data.php" hash="1747c5c9e93a060724c8164c6e0ba322"/></dir><dir name="Model"><file name="Observer.php" hash="108f09a1ab28ea5d0b1e60685284a0b3"/></dir><dir name="Service"><file name="GenerateCSV.php" hash="d468e43d84bb9718b35688efeec70518"/></dir><dir name="Template"><file name="template.csv" hash="9b009f1f2aff39761d6e39f5ce670d70"/></dir><dir name="controllers"><file name="IndexController.php" hash="e93200cbf72dc408e5c08cf026b1a950"/></dir><dir name="etc"><file name="config.xml" hash="effcb99ff4b2f9af9a4e3fc9d48b4c85"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Lema21_CustomExport.xml" hash="e1dd042ae15ca61db6eeaa766c2db125"/></dir></target><target name="magelocale"><dir name="pt_BR"><file name="Lema21_CustomExport.csv" hash="3fd135fcccb6beedcb8462c2898c6ab3"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

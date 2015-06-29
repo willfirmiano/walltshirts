@@ -1,0 +1,82 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     default_modern
+ * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+
+/**
+ * Product media data template
+ *
+ * @see Mage_Catalog_Block_Product_View_Media
+ */
+?>
+<?php
+    $_product = $this->getProduct();
+    $_helper = $this->helper('catalog/output');
+?>
+
+
+
+		<link rel="stylesheet" href="<?php echo $this->getSkinUrl('css/etalage.css'); ?>">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="<?php echo $this->getSkinUrl('js/jquery.etalage.min.js'); ?>"></script>
+
+		<script>
+		var h = jQuery.noConflict();
+			jQuery(document).ready(function(h){
+			
+				h('#etalage').etalage({
+					thumb_image_width: 300,
+					thumb_image_height: 300,
+					source_image_width: 900,
+					source_image_height: 1200,
+					zoom_area_width: 410,
+					show_hint: true,
+					click_callback: function(image_anchor, instance_id){
+						alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
+					}
+				});
+				
+			});
+		</script>
+
+		<div id="examples">
+
+			<ul id="etalage">
+            	<li>				
+					<img class="etalage_thumb_image" src="<?php echo $this->helper('catalog/image')->init($_product, 'image')->backgroundColor(255,255,255)->resize(300, 300); ?>" />
+					<img class="etalage_source_image" src="<?php echo $this->helper('catalog/image')->init($_product, 'image')->backgroundColor(255,255,255)->resize(1200, 1200); ?>" />
+					
+				</li>
+            	<?php foreach ($this->getGalleryImages() as $_image): ?> 
+                <?php if(Mage::registry('current_product')->getImage() != $_image->getFile()){ ?>                
+                <li>
+                	<img class="etalage_thumb_image" src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'image', $_image->getFile())->backgroundColor(255,255,255)->resize(300, 300); ?>" />
+					<img class="etalage_source_image" src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'image', $_image->getFile())->backgroundColor(255,255,255)->resize(1200, 1200); ?>" />
+                </li> 
+                <?php } ?>   
+                <?php endforeach; ?>
+			</ul>
+
+		</div>        
+

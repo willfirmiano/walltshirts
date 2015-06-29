@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package>
+    <name>Bluejalappeno_Orderexport</name>
+    <version>2.11.1</version>
+    <stability>stable</stability>
+    <license uri="http://www.opensource.org/licenses/osl-3.0.php">OSL v3.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Export your Magento orders in three versatile formats, including exports for CSV,  Sage 50 and Highrise </summary>
+    <description>Order Export includes:&#xD;
+&#xD;
+-export of full order details including customer details, payment, tax, shipping method&#xD;
+- standard csv format also includes item details and custom options with one line item per row&#xD;
+-Sage export is pre-formatted for upload to Sage accounting systems&#xD;
+-Highrise export will connect with your Highrise CRM account and update your customer details, order history and background information. </description>
+    <notes>Added support for Enterprise</notes>
+    <authors><author><name>Genevieve Eddison</name><user>japmaple</user><email>sales@bluejalappeno.com</email></author></authors>
+    <date>2013-11-16</date>
+    <time>01:40:04</time>
+    <contents><target name="magecommunity"><dir name="Bluejalappeno"><dir name="Orderexport"><dir name="Block"><dir name="Sales"><dir name="Order"><file name="Grid.php" hash="b9b3a0b810c7fd756d5dbd7ec99a83a5"/></dir></dir></dir><dir name="Helper"><file name="Data.php" hash="54167d4d52bbe2a993031b12d29f0b89"/></dir><dir name="Model"><dir name="Export"><file name="Abstractcsv.php" hash="01607a1c81b14816fa8236a2f9eaf2bd"/><file name="Csv.php" hash="f00ae2076f43a7f73e30fd86ca940371"/><file name="Highrise.php" hash="846f2903af565ded408c8d68745545bb"/><file name="Sage.php" hash="c02b7792430a48f1cd497fd477c911fb"/><file name="Status.php" hash="9864800aa692cfc3846a50cead36c4b1"/></dir><file name="Observer.php" hash="23262c9e09abd58d14365b47ea7fbe00"/><dir name="Options"><file name="Options.php" hash="21f4fdf0df408aad2a0898d1e1459cfd"/></dir></dir><file name="changelog.txt" hash="4b92e0c0dbfbfbd0419e914494b7fe74"/><dir name="controllers"><dir name="Sales"><dir name="Order"><file name="ExportController.php" hash="8343ada483bb5813eb7d04387267cef0"/></dir></dir></dir><dir name="etc"><file name="config.xml" hash="ea64eff226e20394b5514700b31a9b58"/><file name="system.xml" hash="b2d7e6ec001938c450e602b45eefcad1"/></dir><file name="versions_supported.txt" hash="a3e69dd4d9f892aab0dcbf0a5dd246e2"/></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Bluejalappeno_Orderexport.xml" hash="2475d3204e4ed96a2969993d51eacfe2"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

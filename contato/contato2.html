@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title></title>    
+	<meta name="viewport" content="width=device-width">
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+		<div class="container">
+			<div class="row">
+				<div class="span8">
+					<form id="contact-form" class="form-horizontal" method="post">
+					  <fieldset>
+						<legend><img id="title" src="http://www.walltshirts.com/media/images/title_1.jpg" alt="" width="204" height="28"></legend>
+						<div class="control-group">
+						<div id="top">
+							<div id="msg">
+							Sua mensagem foi enviada com sucesso! Entraremos em contato o mais rápido possível.	
+							</div>
+						</div>
+						  <label class="control-label" for="name">Nome</label>
+						  <div class="controls">
+							<input type="text" class="input-xlarge" name="name" id="name">
+						  </div>
+						</div>
+						<div class="control-group">
+						  <label class="control-label" for="email">Email</label>
+						  <div class="controls">
+							<input type="text" class="input-xlarge" name="email" id="email">
+						  </div>
+						</div>
+						<div class="control-group">
+						  <label class="control-label" for="subject">Assunto</label>
+						  <div class="controls">
+							<select class="input-xlarge" id="subject" name="subject">
+							  <option value="duvida">Dúvida</option>
+							  <option value="pedido">Meu Pedido</option>
+							  <option value="parceria">Parceria</option>
+							  <option value="reclelog">Reclamação/Elogio</option>
+							  <option value="site">Problema no Site</option>
+							  <option value="outro">Outros...</option>
+							</select>
+						  </div>
+						</div>
+						<div class="control-group" id="pedido-group" style="display:none">
+							<label class="control-label" for="pedido">Nº Pedido</label>
+							<div class="controls">
+							<input type="text" class="input-xlarge" name="pedido" id="pedido">
+							</div>
+						</div>
+						<div class="control-group">
+						  <label class="control-label" for="message">Mensagem</label>
+						  <div class="controls">
+							<textarea class="input-xlarge" name="message" id="message" rows="3"></textarea>
+						  </div>
+						</div>
+				<div class="form-actions">
+					<!--<button id="send" name="send" class="btn btn-primary btn-large">Enviar</button>-->
+					<input type="submit" id="send" name="send" class="btn btn-primary btn-large" value="Enviar" />
+				</div>
+					  </fieldset>
+					</form>
+				</div>
+			</div>
+		</div>
+      <!--<hr>-->
+    </div>
+
+<!-- ==============================================
+		 JavaScript below! 															-->
+
+<!-- jQuery via Google + local fallback, see h5bp.com -->
+	  <script src="assets/js/jquery-1.7.1.min.js"></script>
+
+<!-- Validate plugin -->
+		<script src="assets/js/jquery.validate.min.js"></script>
+    
+<!-- Scripts specific to this page -->
+		<script src="script.js"></script>
+
+  </body>
+</html>

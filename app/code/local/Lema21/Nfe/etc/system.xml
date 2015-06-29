@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<config>
+	<tabs>
+		<lema21 translate="label">
+			<label>Nota Fiscal Eletrônica</label>
+			<sort_order>500</sort_order>
+		</lema21>
+	</tabs>
+	<sections>
+		<nfe translate="label" module="nfe">
+			<label>Configuração da Nota Fiscal</label>
+			<tab>lema21</tab>
+			<frontend_type>text</frontend_type>
+			<sort_order>300</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>1</show_in_store>
+			<groups>
+				<general translate="label">
+					<label>Geral</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>0</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>0</show_in_store>
+					<fields>
+						<chave_acesso_bing translate="label">
+							<label>Chave de Acesso</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>0</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment>Chave de acesso do Bling</comment>
+						</chave_acesso_bing>
+
+						<pedido_status translate="label">
+							<label>Status do pedido para permitir emissão Nf-e</label>
+							<frontend_type>multiselect</frontend_type>
+							<sort_order>91</sort_order>
+							<source_model>nfe/source</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</pedido_status>
+					</fields>
+				</general>
+			</groups>
+		</nfe>
+	</sections>
+</config>

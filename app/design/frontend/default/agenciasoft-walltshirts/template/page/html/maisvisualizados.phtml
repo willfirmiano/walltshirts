@@ -1,0 +1,89 @@
+<?php 
+
+	$storeId    = Mage::app()->getStore()->getId();
+	$products = Mage::getResourceModel('reports/product_collection')
+		->addOrderedQty()
+		->addAttributeToSelect('*')
+		->addAttributeToSelect(array('*'))
+		->setStoreId($storeId)
+		->addStoreFilter($storeId)
+		->addViewsCount();
+	Mage::getSingleton('catalog/product_status')->addVisibleFilterToCollection($products);
+	Mage::getSingleton('catalog/product_visibility')->addVisibleInCatalogFilterToCollection($products);
+	
+	$products->setPageSize(20)->setCurPage(1);
+	$this->setProductCollection($products);
+	 
+	
+?>
+<?php if (($_products = $this->getProductCollection()) && $_products->getSize()): ?>
+
+<h2 class="soft-titulos-visualizados"><img src="<?php echo $this->getSkinUrl('images/visualizados.png'); ?>" /></h2>
+
+<div class="category-products most_viewed">
+<?php $_collectionSize = 4;//count($_products->getItems()); echo $_collectionSize; ?>
+    <ul class="products-grid">
+    <?php $i=1; foreach ($_products->getItems() as $_product): ?>
+    <?php $estoque = Mage::getModel('cataloginventory/stock_item')->loadByProduct($_product->getId())->getIs_in_stock(); ?>
+    <?php if($i >= 1 && $i <= 12 && $estoque == 1){ ?>
+        <?php 
+			$calculo = $i % 4;
+			$preco_normal = number_format($_product->getPrice(), 2);
+			$preco_normal =  str_replace(',', ';',$preco_normal);
+			$preco_normal =  str_replace('.', ',',$preco_normal);
+			$preco_normal =  'R$' . str_replace(';', '.',$preco_normal);
+			
+			$preco_final = number_format($_product->getSpecialPrice(), 2);
+			$preco_final = str_replace(',', ';',$preco_final);
+			$preco_final = str_replace('.', ',',$preco_final);
+			$preco_final = 'R$' . str_replace(';', '.',$preco_final);
+						
+		?>        
+            <li class="item <?php if($calculo == 0){echo 'last';}?>">            
+                    <a class="product-image" href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($this->getImageLabel($_product, 'small_image')) ?>">
+                        <img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(200,300); ?>" width="200" height="300" alt="<?php echo $this->htmlEscape($this->getImageLabel($_product, 'small_image')) ?>" title="<?php echo $this->htmlEscape($this->getImageLabel($_product, 'small_image')) ?>" />
+                    </a>
+                    <h2 class="product-name"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_product->getName()) ?>"><?php echo $this->htmlEscape($_product->getName()) ?></a></h2>
+                                           
+                        <?php if($preco_final != "" && $preco_final != 'R$0,00'){?>
+                        	<div class="price-box">
+                                <p class="old-price">
+                                    <span class="price-label"><?php echo $this->__('Regular Price:') ?></span>
+                                    <span id="old-price-14" class="price"><?php echo $preco_normal; ?></span>
+                                </p>
+                                <p class="special-price">
+                                    <span class="price-label"><?php echo $this->__('Special Price:') ?></span>
+                                    <span id="product-price-14" class="price"><?php echo $preco_final; ?></span>
+                                </p>
+                            </div>
+                        <?php } else{ ?>
+                        	<div class="price-box">
+                                <span id="product-price-2" class="regular-price">
+                                    <span class="price"><?php echo $preco_normal; ?></span>
+                                </span>
+                            </div>
+                        <?php } ?>
+                        <div class="actions">
+                            <?php if($_product->isSaleable()): ?>
+                                <button class="button" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><span><span><?php echo $this->__('Add to Cart') ?></span></span></button>
+                                <div class="clear"></div>
+                            <?php else: ?>
+                                <p class="availability out-of-stock"><span class="out-of-stock"><?php echo $this->__('Out of stock') ?></span></p>
+                                <div class="clear"></div>
+                            <?php endif; ?>
+                            <ul class="add-to-links">
+                                <?php if ($this->helper('wishlist')->isAllow()) : ?>
+                                <li><a href="<?php echo $this->helper('wishlist')->getAddUrl($_product) ?>"><?php echo $this->__('Add to Wishlist') ?></a></li>
+                                <?php endif; ?>
+                                <?php if($_compareUrl=$this->getAddToCompareUrl($_product)): ?>
+                                <li class="last"><span class="separator">|</span> <a href="<?php echo $_compareUrl ?>"><?php echo $this->__('Add to Compare') ?></a></li>
+                                <?php endif; ?>
+                            </ul>
+                        </div>
+            </li>
+        <?php $i++; if($calculo == 0){echo '</ul><ul class="products-grid">';}?>    
+        <?php } ?>
+        <?php endforeach; $kol = $_collectionSize; ?> 
+        </ul>
+</div>
+<?php endif; ?>

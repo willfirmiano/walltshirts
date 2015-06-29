@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">    
+    <adminhtml_sales_order_view>       
+        <reference name="sales_order_tabs">            
+            <block type="nfe/adminhtml_sales_order_view_tab_nfe " name="tab_nfe">
+            </block>
+            <action method="addTab">
+                <name>nota_fiscal</name>
+                <block>tab_nfe</block>
+            </action>
+        </reference>    
+    </adminhtml_sales_order_view>
+</layout>

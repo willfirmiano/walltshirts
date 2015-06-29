@@ -1,0 +1,68 @@
+
+<div class="soft-bg-footer">
+	<div class="soft-footer-content">
+    	<div class="soft-banner-footer">
+        	<a title="A segurança que você precisa - PagSeguro" target="_blank" href="https://pagseguro.uol.com.br/para_voce/como_funciona.jhtml#rmcl">
+            	<img src="http://walltshirts.com/skin/frontend/default/agenciasoft-walltshirts/images/banner-rodape01.png" />
+            </a>
+            <a title="Tabela de Medidas" href="http://walltshirts.com/skin/frontend/default/agenciasoft-walltshirts/images/medidas.png" onclick="return false;" class="lytebox right">
+            	<img src="http://walltshirts.com/skin/frontend/default/agenciasoft-walltshirts/images/banner-rodape02.png" />
+            </a>
+            <div class="clear"></div>
+        </div><!--banner footer-->
+    	<div class="clear"></div>
+        <div class="soft-footer-blocos soft-blocos-sobre">
+        	<h4>Sobre a Wall</h4>
+            <p>
+            	Nosso foco é a venda de camisetas com temas voltados a CULTURA DA INTERNET. Atendendo principalmente Youtubers, a Wall faz com que seus visitantes passem a conhecer diversos ícones da internet em um só lugar.
+            </p>
+        </div><!--footer blocos-->
+        <div class="soft-footer-blocos">
+        	<h4>Conta</h4>
+            <ul>
+            	<li><img src="http://walltshirts.com/skin/frontend/default/agenciasoft-walltshirts/images/ico-conta.png" /><a title="Minha conta" href="http://walltshirts.com/customer/account/">Minha conta</a></li>
+                <li><img src="http://walltshirts.com/skin/frontend/default/agenciasoft-walltshirts/images/ico-pedidos.png" /><a title="Meus pedidos" href="http://walltshirts.com/sales/order/history/">Meus pedidos</a></li>
+                <li><img src="http://walltshirts.com/skin/frontend/default/agenciasoft-walltshirts/images/ico-lista.png" /><a title="Wishlist" href="http://walltshirts.com/wishlist/">Wishlist</a></li>
+            </ul>
+        </div><!--footer blocos-->
+        <div class="soft-footer-blocos">
+        	<h4>Informações</h4>
+            <ul>
+            	<li><img src="http://walltshirts.com/skin/frontend/default/agenciasoft-walltshirts/images/ico-nos.png" /><a title="Sobre-nós" href="http://walltshirts.com/awall/">A Wall</a></li>
+                <li><img src="http://walltshirts.com/skin/frontend/default/agenciasoft-walltshirts/images/ico-termos.png" /><a title="Termos e políticas" href="http://walltshirts.com/termos">Termos e políticas</a></li>
+                <li><img src="http://walltshirts.com/skin/frontend/default/agenciasoft-walltshirts/images/ico-entrega.png" /><a title="Sobre a entrega" href="http://walltshirts.com/envio/">Prazo de Envio</a></li>
+            </ul>
+        </div><!--footer blocos-->
+        <div class="soft-footer-blocos right">
+        	<h4>Atendimento</h4>
+            <ul>
+            	<!--  <li><img src="" /><span> (00) 0000-0000</span></li>-->
+                <li><img src="http://walltshirts.com/skin/frontend/default/agenciasoft-walltshirts/images/ico-form.png" /><a title="Formulário de contato" href="http://walltshirts.com/contacts">Formulário de contato</a></li>
+                <li><img src="http://walltshirts.com/skin/frontend/default/agenciasoft-walltshirts/images/ico-troca.png" /><a title="Trocas e devoluções" href="http://walltshirts.com/trocas/">Trocas</a></li>
+            </ul>
+        </div><!--footer blocos-->
+    	<div class="clear"></div>
+        <div class="soft-social">
+        	<h4>Social</h4>
+        	<a title="Facebook - Wall T-Shirts" target="_blank" href="https://pt-br.facebook.com/walltshirts"><img src="http://walltshirts.com/skin/frontend/default/agenciasoft-walltshirts/images/social01.png" /></a>
+            <a title="Twitter - Wall T-Shirts" target="_blank" href="https://twitter.com/walltshirts"><img src="http://walltshirts.com/skin/frontend/default/agenciasoft-walltshirts/images/social02.png" /></a>
+                    </div><!--social-->
+        <div class="soft-pagamento">
+        	<h4>Pagamento</h4>
+        	<img src="http://walltshirts.com/skin/frontend/default/agenciasoft-walltshirts/images/pagamento.png" />
+            <div class="clear"></div>
+        </div><!--social-->
+        <div class="clear"></div>
+    	<p class="soft-copyright">Copyright 2013 - Wall T-Shirts CNPJ 14.154.340/0001-81</p>
+    </div><!--footer content-->
+    <div class="clear"></div>
+</div><!--bg footer-->
+<!--
+<div class="soft-fundo-logo"> 
+    <div class="soft-logo-ag_soft">
+        <a href="http://www.agenciasoft.com.br/?utm_source=walltshirts&utm_medium=banner-creditos&utm_campaign=lojas-desenvolvidas" title="Criação de Lojas Virtuais, Sites e Marketing Digital - Agência SOFT" target="_blank">
+        <img src="<?php/* echo $this->getSkinUrl('images/logo-ag_soft.png') */?>" alt="Criação de Lojas Virtuais, Sites e Marketing Digital - Agência SOFT">
+        </a>
+    </div>
+     
+</div>--><!--fundo logo-->

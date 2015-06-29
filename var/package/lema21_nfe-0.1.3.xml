@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>lema21_nfe</name>
+    <version>0.1.3</version>
+    <stability>beta</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">Open Software License (OSL 3.0)</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>M&#xF3;dulo para Emiss&#xE3;o de Nota Fiscal</summary>
+    <description>M&#xF3;dulo para Emiss&#xE3;o de Nota Fiscal</description>
+    <notes>1. release do m&#xF3;dulo para emiss&#xE3;o de nota fiscal</notes>
+    <authors><author><name>Marcelo Linhares</name><user>marcelolinhares</user><email>marcelo@lema21.com.br</email></author><author><name>Eduardo Luz</name><user>luzeduardo</user><email>luz.eduardo@gmail.com</email></author></authors>
+    <date>2013-02-08</date>
+    <time>03:25:17</time>
+    <contents><target name="magelocal"><dir name="Lema21"><dir name="Nfe"><dir name="Block"><dir name="Adminhtml"><dir name="Sales"><dir name="Order"><file name="Grid.php" hash="f0c273de4795dd768e8bc67f4c30eaa7"/><dir name="View"><dir name="Tab"><file name="Nfe.php" hash="56ed64fe07be03c72426ed44781ff718"/></dir></dir><file name="View.php" hash="9858c3e31a603d3018c5ed115c150f0f"/></dir></dir></dir></dir><dir name="Helper"><file name="Data.php" hash="bb8274d90adfff9b93f53151895f85c7"/></dir><dir name="Model"><dir name="Lib"><file name="Array2XML.php" hash="b1374d5e7180324bc0802106a58e9767"/><file name="ConnectBling.php" hash="9a2622fdb89c86fcdf030f53d14be5f6"/></dir><file name="Observer.php" hash="a68fb2ae224724a7a81dcad4e6eb3ff9"/><dir name="Service"><file name="Send.php" hash="f19c331dd662aec463b70906c67f66a6"/></dir><file name="Source.php" hash="0d13e85c581e8ec3225d5ae52e1e4096"/><file name="TransformToXML.php" hash="11f378a36f26c5e635e31e0e58b02279"/></dir><dir name="controllers"><dir name="Adminhtml"><file name="NfeController.php" hash="2b34d768fc9b23ca3d378c7b1ef3b8a9"/></dir></dir><dir name="etc"><file name="adminhtml.xml" hash="00c2da67b8da0e2fcb021aa370fd0399"/><file name="config.xml" hash="283a6e3ec4643745b91b82cff7fc7414"/><file name="config.xml~" hash="6b62aebc1c22db6bb2f1622f70b1f9d8"/><file name="system.xml" hash="43133e4732d734844f71da13ab0aef06"/></dir><dir name="sql"><dir name="nfe_setup"><file name="mysql4-install-0.1.0.php" hash="2e185bafece08b80a364cfd265450e51"/><file name="mysql4-upgrade-0.1.0-0.1.1.php" hash="ef98bd6bb45e346d2e434bae31122b44"/><file name="mysql4-upgrade-0.1.1-0.1.2.php" hash="6da1c363454346f5b644bb14ec47312a"/></dir></dir></dir></dir></target><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="layout"><file name="nfe.xml" hash="ec070db4f67c767797e838d99e2cb98b"/></dir><dir name="template"><dir name="nfe"><file name="list.phtml" hash="d79d0a56fb1b78fa44409979c0113986"/></dir></dir></dir></dir></dir></target><target name="mage"><dir name="app"><dir name="etc"><dir name="modules"><file name="Lema21_Nfe.xml" hash="7099b34b827feef8bdb2ade0fe3051ca"/></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>5.4.6</max></php></required></dependencies>
+</package>

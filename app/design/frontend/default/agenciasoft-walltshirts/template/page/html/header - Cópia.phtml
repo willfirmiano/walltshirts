@@ -1,0 +1,303 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     default_modern
+ * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+/**
+ * @var Mage_Page_Block_Html_Header $this
+ */
+?>
+
+<!--<link href='https://fonts.googleapis.com/css?family=Pathway+Gothic+One' rel='stylesheet' type='text/css'>-->
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href="<?php echo $this->getSkinUrl('css/estilo-soft.css');?>" type="text/css" rel="stylesheet"/>
+<style type="text/css" media="all">
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { 
+.soft-footer-blocos ul li, .soft-footer-blocos p{font-size:12px;}  
+}
+</style>
+<!--[if lte IE 9]>
+      <style type="text/css">
+			.soft-footer-blocos ul li, .soft-footer-blocos p{font-size:12px;}            
+       </style>
+<![endif]-->
+
+<!--[if lte IE 8]>
+      <style type="text/css">
+			.soft-header-search form input[type="text"]{height:20px; padding-top:5px; text-align:left;}            
+       </style>
+<![endif]-->
+
+<!--[if lte IE 7]>
+      <style type="text/css">
+			.soft-header-search form input[type="text"]{height:20px; padding-top:5px; text-align:center;}
+            .soft-header-search form input[type="image"]{margin-top:-29px;}  
+            .catalog-product-view .product-view .product-img-box{margin-top:0 !important;}
+            .review-product-list .product-view .product-img-box{margin-top:0 !important;} 
+            
+            .add-to-cart button.button, .item .actions button.button{position:absolute; margin:-40px 0 0 -101px;}
+            .availability.out-of-stock{margin-left:-101px;}  
+            .soft-footer-blocos ul li img{float:left;}
+            .soft-footer-blocos ul li a{float:left;}
+            .soft-copyright{margin-top:-60px;} 
+            .soft-social, .soft-pagamento{margin-top:-20px;}
+            .soft-tabela-red{background-image:url(<?php echo $this->getSkinUrl('images/bg-menu-ie7.png');?>); background-repeat:repeat-x;}  
+            .catalog-product-view .add-to-cart button.button{position:absolute; margin:-60px 0 0 -231px;}
+       </style>
+<![endif]-->
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="<?php echo $this->getSkinUrl('js/jsCarousel-2.0.0.js'); ?>" type="text/javascript"></script>
+    <link href="<?php echo $this->getSkinUrl('css/style-carousel.css'); ?>" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+		var b = jQuery.noConflict();
+        b(document).ready(function() {
+            b('#carouselh').jsCarousel({ onthumbnailclick: function(src) { alert(src); }, 
+				scrollspeed: 500,
+                delay: 5000,
+                itemstodisplay: 4,
+                autoscroll: true,
+                circular: true,
+                masked: false,
+                onthumbnailclick: null,
+                orientation: 'h'
+			});
+        });       
+        
+    </script>
+
+<script type="text/javascript" language="javascript" src="<?php echo $this->getSkinUrl('js/lytebox.js'); ?>"></script>
+<link rel="stylesheet" href="<?php echo $this->getSkinUrl('css/lytebox.css'); ?>" type="text/css" media="screen" />
+
+<div class="soft-bg-toplinks">
+	<div class="soft-toplinks-content">
+    	<div class="soft-toplinks-left">
+        	<ul>
+            	<li><span>(00) 0000-0000</span></li>
+                <li><a title="Quem somos" href="<?php echo $this->getBaseUrl(); ?>sobre-nos/">Sobre-nós</a></li>
+                <li><a title="Atendimento" href="<?php echo $this->getBaseUrl(); ?>contacts/">Atendimento</a></li>
+            </ul>
+        </div><!--toplinks left-->
+        <div class="soft-toplinks-right">
+        	<ul class="right">
+            	<?php echo Mage::helper('function')->Entrar_Sair(); ?>
+                <li><a title="Minha Conta" href="<?php echo $this->getBaseUrl(); ?>customer/account/">Minha Conta</a></li>
+                <li><a title="Whishlist" href="<?php echo $this->getBaseUrl(); ?>wishlist/">Whishlist</a></li>
+                <li><a class="last" title="Fechar Compra" href="<?php echo $this->getBaseUrl(); ?>checkout/cart/"><img src="<?php echo $this->getSkinUrl('images/ico-fecharcompra.png'); ?>" /></a></li>
+            </ul>
+        </div><!--toplinks right-->
+        <div class="clear"></div>
+    </div><!--tplinks content-->
+    <div class="clear"></div>
+</div><!--bg toplinks-->
+
+<div class="soft-bg-header">
+<?php /*?><table class="soft-tabela" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="soft-tabela-red">&nbsp;</td>
+    <td class="soft-tabela-centro">
+    	<a class="soft-logo" title="Wall T-Shirts - Home" href="<?php echo $this->getBaseUrl(); ?>"><img src="<?php echo $this->getSkinUrl('images/logo.png'); ?>"  /></a>
+    	<?php echo $this->getChildHtml('topMenu') ?>
+        <div class="soft-header-search">
+            <form id="search_mini_form" action="<?php echo $this->getBaseUrl();?>catalogsearch/result/" method="get">
+                <input id="search" class="input-text" type="text" autocomplete="off" name="q" value="">
+                <input class="button" type="image" src="<?php echo $this->getSkinUrl('images/bt-pesquisa.png');?>" title="Pesquisar">
+                <div id="search_autocomplete" class="search-autocomplete" style="display: none;"></div>
+                <script type="text/javascript">
+                //<![CDATA[
+                var searchForm = new Varien.searchForm('search_mini_form', 'search', 'Procure em toda loja...');
+                searchForm.initAutocomplete('/catalogsearch/ajax/suggest/', 'search_autocomplete');
+                //]]>
+                </script>
+            </form>
+            <div class="soft-carrinho">
+            	<a title="<?php echo Mage::helper('function')->ItensCarrinho(); ?> Iten(s) no Carrinho" href="<?php echo $this->getBaseUrl(); ?>checkout/cart/">
+					<?php echo Mage::helper('function')->ItensCarrinho(); ?>
+                </a>    
+            </div><!--carrinho-->
+        </div><!--search-->
+    </td>
+    <td class="soft-tabela-red">&nbsp;</td>
+  </tr>
+</table><?php */?>
+	<div class="soft-header-content">
+    	<a class="soft-logo" title="Wall T-Shirts - Home" href="<?php echo $this->getBaseUrl(); ?>"><img src="<?php echo $this->getSkinUrl('images/logo.png'); ?>"  /></a>
+    	<?php echo $this->getChildHtml('topMenu') ?>
+    	<?php print $this->getLayout()->createBlock("page/html_topmenu")->setTemplate("page/html/topmenu.phtml")->toHtml(); ?>
+    	
+        <div class="soft-header-search">
+            <form id="search_mini_form" action="<?php echo $this->getBaseUrl();?>catalogsearch/result/" method="get">
+                <input id="search" class="input-text" type="text" autocomplete="off" name="q" value="">
+                <input class="button" type="image" src="<?php echo $this->getSkinUrl('images/bt-pesquisa.png');?>" title="Pesquisar">
+                <div id="search_autocomplete" class="search-autocomplete" style="display: none;"></div>
+                <script type="text/javascript">
+                //<![CDATA[
+                var searchForm = new Varien.searchForm('search_mini_form', 'search', 'Procure em toda loja...');
+                searchForm.initAutocomplete('/catalogsearch/ajax/suggest/', 'search_autocomplete');
+                //]]>
+                </script>
+            </form>
+            <div class="soft-carrinho">
+            	<a title="<?php echo Mage::helper('function')->ItensCarrinho(); ?> Iten(s) no Carrinho" href="<?php echo $this->getBaseUrl(); ?>checkout/cart/">
+					<?php echo Mage::helper('function')->ItensCarrinho(); ?>
+                </a>    
+            </div><!--carrinho-->
+        </div><!--search-->
+        <?php
+			$_productCollection=$this->getLoadedProductCollection();
+			$_helper = $this->helper('catalog/output');
+			
+			$current_page = '';
+			if(Mage::app()->getFrontController()->getRequest()->getRouteName() == 'cms'):
+			$current_page = Mage::getSingleton('cms/page')->getIdentifier();
+			endif;
+			if(empty($current_page)):
+			$current_page = Mage::app()->getFrontController()->getRequest()->getRouteName();
+			endif;
+			
+			if($current_page == 'home'){
+		?>
+		
+		 <?php// print $this->getLayout()->createBlock("banners/banners")->setTemplate("banners/banners.phtml")->toHtml(); ?>
+		
+        	 
+                <!-- <div class="soft-imagem-home"> -->
+                    <!--  <img src="<?php// echo $this->getSkinUrl('images/imagem-estatica.png'); ?>" />-->
+                    <?php print $this->getLayout()->createBlock("slideshow/slideshow")->setTemplate("slideshow/slideshow.phtml")->toHtml(); ?>
+                <!-- </div> --><!-- imagem home-->
+            
+		<?php } ?> 
+	</div><!--header content-->   
+</div><!--bg header-->
+
+<?php
+$_productCollection=$this->getLoadedProductCollection();
+$_helper = $this->helper('catalog/output');
+
+$current_page = '';
+if(Mage::app()->getFrontController()->getRequest()->getRouteName() == 'cms'):
+$current_page = Mage::getSingleton('cms/page')->getIdentifier();
+endif;
+if(empty($current_page)):
+$current_page = Mage::app()->getFrontController()->getRequest()->getRouteName();
+endif;
+
+if($current_page == 'home'){
+?>
+<div class="soft-bg-conteudo">
+    <div class="soft-destaque-topo">
+        <div class="soft-destaque-blocos">
+            <a title="" href="<?php echo $this->getBaseUrl(); ?>cara-nova/">
+                <img src="<?php echo $this->getSkinUrl('images/banner-topo01.png'); ?>" />
+            </a>
+            <h4><a title="" href="<?php echo $this->getBaseUrl(); ?>cara-nova/">Cara Nova</a></h4>   
+            <p>
+                <a title="" href="<?php echo $this->getBaseUrl(); ?>cara-nova/">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget risus ligula. Aenean augue massa, venenatis sed sapien in.
+                </a>
+            </p> 
+            <a title="Saiba +" class="soft-saiba-mais" href="<?php echo $this->getBaseUrl(); ?>cara-nova/">Saiba +</a>
+        </div><!--destaque blocos-->
+        <div class="soft-destaque-blocos">
+            <a title="" href="<?php echo $this->getBaseUrl(); ?>imprensa/">
+                <img src="<?php echo $this->getSkinUrl('images/banner-topo02.png'); ?>" />
+            </a>
+            <h4><a title="" href="<?php echo $this->getBaseUrl(); ?>imprensa">Sala de Imprensa</a></h4>   
+            <p>
+                <a title="" href="<?php echo $this->getBaseUrl(); ?>imprensa">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget risus ligula. Aenean augue massa, venenatis sed sapien in.
+                </a>
+            </p> 
+            <a title="Saiba +" class="soft-saiba-mais" href="<?php echo $this->getBaseUrl(); ?>imprensa/">Saiba +</a>
+        </div><!--destaque blocos-->
+        <div class="soft-destaque-blocos right">
+            <a title="" href="<?php echo $this->getBaseUrl(); ?>envio/">
+                <img src="<?php echo $this->getSkinUrl('images/banner-topo03.png'); ?>" />
+            </a>
+            <h4><a title="" href="<?php echo $this->getBaseUrl(); ?>envio/">Prazo de Envio</a></h4>   
+            <p>
+                <a title="" href="<?php echo $this->getBaseUrl(); ?>envio/">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget risus ligula. Aenean augue massa, venenatis sed sapien in.
+                </a>
+            </p> 
+            <a title="Saiba +" class="soft-saiba-mais" href="<?php echo $this->getBaseUrl(); ?>envio/">Saiba +</a>
+        </div><!--destaque blocos-->    
+    </div><!--destaque topo-->
+    
+    <h6 class="soft-titulos-home">Marcas</h6>
+    <div class="soft-marcas">
+        <div id="hWrapper">
+            <div id="carouselh">
+                 <?php	
+                    
+                    $l = 0;
+                    $_category = Mage::getModel('catalog/category')->load(4); ?>
+        
+                <?php
+                $_subcategories = $_category->getChildrenCategories();
+                if (count($_subcategories) > 0){    
+                    foreach($_subcategories as $_subcategory){
+                         $l++;
+                         $id_sub = $_subcategory->getId();
+                         $imagem = Mage::getModel('catalog/category')->load($id_sub)->getImageUrl();?>
+                        <div><a title="<?php echo $_subcategory->getName(); ?>" href="<?php echo $_subcategory->getUrl(); ?>"><img src="<?php echo $imagem; ?>" width="200" height="80"></a></div>
+                         <?php			 
+                    }
+                }
+                ?>		    
+            </div>
+        </div>        
+    </div> 
+</div><!--bg conteudo-->
+<?php } ?>
+
+
+<?php
+$_productCollection=$this->getLoadedProductCollection();
+$_helper = $this->helper('catalog/output');
+
+$current_page = '';
+if(Mage::app()->getFrontController()->getRequest()->getRouteName() == 'cms'):
+$current_page = Mage::getSingleton('cms/page')->getIdentifier();
+endif;
+if(empty($current_page)):
+$current_page = Mage::app()->getFrontController()->getRequest()->getRouteName();
+endif;
+
+$breadcrumbs = $this->getLayout()->getBlock('breadcrumbs');
+$breadcrumbs->addCrumb('home',array('label'=>Mage::helper('cms')->__('Home'),'title'=>Mage::helper('cms')->__('Home Page'),'link'=>Mage::getBaseUrl())); 
+      
+$pagina[1]= 'catalog';
+$pagina[2]= 'catalogsearch';
+$pagina[3]= 'review';
+
+for($i = 1; $i <= 3; $i++){
+   if($current_page == $pagina[$i]){?>
+   		<div class="soft-breadcumbs">
+        	<?php echo $this->getLayout()->getBlock('breadcrumbs')->toHtml(); ?>
+        </div><!--breadcumbs-->
+      <?php
+   }
+}
+?>
+

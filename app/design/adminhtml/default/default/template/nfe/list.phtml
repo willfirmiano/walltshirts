@@ -1,0 +1,40 @@
+<div class="entry-edit">
+   
+        <input name="form_key" type="hidden" value="<?php echo Mage::getSingleton('core/session')->getFormKey() ?>" />
+
+        <div class="entry-edit">
+            <div class="entry-edit-head">
+                <h4 class="icon-head head-products">Nota fiscal emitida</h4>
+            </div>
+        </div>
+        <div class="grid np">
+            <div class="hor-scroll">
+                <table cellspacing="0" class="data order-tables">
+                    <colgroup><col>
+                        <col width="1">
+                        <col width="100">
+                        <col width="120">
+                        <col width="70">
+                        <col width="1">
+                    </colgroup><thead>
+                        <tr class="headings">
+                            <th>Chave de Acesso</th>
+                            <th>Série</th>
+                            <th class="a-center">Número</th>
+                            <th><span class="nobr">Status</span></th>
+
+                        </tr>
+                    </thead>
+                    <tbody class="even">
+                       <td> <?php  echo $this->getOrder()->getData("nfe_access_key") ?> </td>
+                       <td> 1 </td>
+                       <td>  <?php echo $this->getOrder()->getData("nfe_number") ?> </td>
+                       <td>  <?php echo $this->getOrder()->getData("nfe_status") ?> </td>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </form>
+</div>
