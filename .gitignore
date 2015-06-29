@@ -1,2 +1,2 @@
-var/sessions
-var/cache
+var/sessions/*
+var/cache/*
