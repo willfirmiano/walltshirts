@@ -42,7 +42,7 @@
                 <connection>
                     <host><![CDATA[walltshirts.chy19nljk6id.sa-east-1.rds.amazonaws.com]]></host>
                     <username><![CDATA[walltshirts]]></username>
-                    <password><![CDATA[$up0rtEs]]></password>
+                    <password><![CDATA[********]]></password>
                     <dbname><![CDATA[walltshirts]]></dbname>
                     <initStatements><![CDATA[SET NAMES utf8]]></initStatements>
                     <model><![CDATA[mysql4]]></model>
